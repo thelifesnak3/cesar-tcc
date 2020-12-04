@@ -1,3 +1,4 @@
+import 'package:cesar_tcc/ui/pages/mari_chat/mari_chat_page.dart';
 import 'package:cesar_tcc/ui/pages/mari_home/mari_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,16 +10,17 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
-    final primaryColor = Color.fromRGBO(136, 14, 79, 1);
-    final primaryColorDark = Color.fromRGBO(96, 0, 39, 1);
-    final primaryColorLight = Color.fromRGBO(188, 71, 123, 1);
+    final primaryColor = Colors.deepPurple[900];
+    final primaryColorDark = Colors.deepPurple[900];
+    final primaryColorLight = Colors.deepPurple[400];
 
     return MaterialApp(
       title: 'Mari',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => MariHomePage()
+        '/': (context) => MariHomePage(),
+        '/chat': (context) => MariChatPage()
       },
       theme: ThemeData(
         primaryColor: primaryColor,
