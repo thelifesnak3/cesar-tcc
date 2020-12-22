@@ -5,6 +5,6 @@ import '../factories.dart';
 Chat makeRemoteChat() {
   return RemoteChat(
     httpClient: makeHttpAdapter(),
-    url: makeApiUrl('/guest-room')
+    url: makeApiUrl('guest-room')
   );
 }

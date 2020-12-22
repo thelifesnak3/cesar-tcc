@@ -15,7 +15,7 @@ class MessageParams extends Equatable {
   List<Object> get props => [action, message];
 
   MessageParams({
-    @required this.action,
+    this.action,
     @required this.message
   });
 }

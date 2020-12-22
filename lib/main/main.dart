@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       title: 'Mari',
       debugShowCheckedModeBanner: false,
       theme: makeAppTheme(),
-      initialRoute: '/',
+      initialRoute: '/chat',
       getPages: [
         GetPage(name: '/', page: makeMariHomePage),
         GetPage(name: '/chat', page: makeMariChatPage)
