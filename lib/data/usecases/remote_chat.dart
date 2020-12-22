@@ -7,19 +7,20 @@ import '../../domain/usecases/usecases.dart';
 import '../http/http.dart';
 import '../models/models.dart';
 
-class RemoteMessage implements Message {
+class RemoteChat implements Chat {
   final HttpClient httpClient;
   final String url;
 
-  RemoteMessage({
+  RemoteChat({
     @required this.httpClient,
     @required this.url
   });
 
-  Future<MessageEntity> send(MessageParams params) async {
+  Future<MessageEntity> sendMessage(MessageParams params) async {
     final body = RemoteMessageParams.fromDomain(params).toJson();
     try {
-      final httpResponse = await httpClient.request(url: url, method: 'post', body: body);
+      final httpResponse = await httpClient.request(url: url+'?message=${params.message}', method: 'post', body: body);
+      print(httpResponse);
       return RemoteMessageModel.fromJson(httpResponse).toEntity();
     } on HttpError catch(error) {
       throw error == HttpError.unauthorized

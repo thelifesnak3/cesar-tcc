@@ -1,0 +1,1 @@
+String makeApiUrl(String path) => 'http://191.252.178.237:8000/api/$path';

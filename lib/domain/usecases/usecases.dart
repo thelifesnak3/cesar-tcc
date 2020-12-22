@@ -1,2 +1,2 @@
 export 'authentication.dart';
-export 'message.dart';
+export 'chat.dart';

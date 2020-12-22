@@ -1,0 +1,1 @@
+export './mari_home_page_factory.dart';

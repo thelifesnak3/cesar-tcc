@@ -3,8 +3,8 @@ import 'package:equatable/equatable.dart';
 
 import '../entities/entities.dart';
 
-abstract class Message {
-  Future<MessageEntity> send(MessageParams params);
+abstract class Chat {
+  Future<MessageEntity> sendMessage(MessageParams params);
 }
 
 class MessageParams extends Equatable {

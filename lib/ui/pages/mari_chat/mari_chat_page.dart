@@ -1,7 +1,13 @@
-import 'package:cesar_tcc/ui/pages/mari_chat/components/components.dart';
 import 'package:flutter/material.dart';
 
+import 'package:cesar_tcc/ui/pages/mari_chat/components/components.dart';
+import 'package:cesar_tcc/ui/pages/mari_chat/mari_chat_presenter.dart';
+
 class MariChatPage extends StatefulWidget {
+  final MariChatPresenter presenter;
+
+  MariChatPage(this.presenter);
+
   @override
   _MariChatPageState createState() => _MariChatPageState();
 }
