@@ -19,10 +19,7 @@ class RemoteChat implements Chat {
   Future<MessageEntity> sendMessage(MessageParams params) async {
     final body = RemoteMessageParams.fromDomain(params).toJson();
     try {
-      print(url);
-      print(params.message);
-      final httpResponse = await httpClient.request(url: url+'?message=${params.message}', method: 'post', body: body);
-      print(httpResponse);
+      final httpResponse = await httpClient.request(url: url+'?message=${params.message}', method: 'get');
       return RemoteMessageModel.fromJson(httpResponse).toEntity();
     } on HttpError catch(error) {
       throw error == HttpError.unauthorized

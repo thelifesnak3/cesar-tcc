@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:cesar_tcc/domain/entities/message_entity.dart';
 import 'package:meta/meta.dart';
 
 import '../../ui/pages/pages.dart';
@@ -27,7 +28,8 @@ class StreamMariChatPresenter implements MariChatPresenter {
     _state.isLoading = true;
     _update();
     try {
-      await chat.sendMessage(MessageParams(message: _state.message)); 
+      MessageEntity response = await chat.sendMessage(MessageParams(message: _state.message)); 
+      print(response.message);
     } on DomainError catch (error) {
       _state.mainError = error.description;
     }

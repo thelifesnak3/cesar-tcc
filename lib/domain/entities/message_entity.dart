@@ -1,6 +1,6 @@
 class MessageEntity {
   final String message;
-  final List<String> tags;
+  final List<dynamic> tags;
 
   MessageEntity(this.message, this.tags);
 }
