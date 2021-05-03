@@ -14,16 +14,17 @@ ThemeData makeAppTheme() {
       backgroundColor: Colors.white,
       textTheme: TextTheme(
         headline1: TextStyle(
-          fontSize: 18,
+          fontSize: 24,
           fontWeight: FontWeight.bold,
           color: Colors.white
         ),
         headline2: TextStyle(
-          fontSize: 14,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
           color: Colors.white
         ),
         headline3: TextStyle(
-          fontSize: 12,
+          fontSize: 14,
           color: Colors.white
         )
       ),
@@ -38,8 +39,8 @@ ThemeData makeAppTheme() {
       ),
       buttonTheme: ButtonThemeData(
         colorScheme: ColorScheme.light(primary: primaryColor),
-        buttonColor: primaryColor,
-        splashColor: primaryColorLight,
+        buttonColor: Colors.lightGreen,
+        splashColor: Colors.lightGreenAccent,
         padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         textTheme: ButtonTextTheme.primary,
         shape: RoundedRectangleBorder(

@@ -1,3 +1,4 @@
+import 'package:cesar_tcc/ui/pages/mari_home/components/comecar_button.dart';
 import 'package:flutter/material.dart';
 
 class MariHomePage extends StatefulWidget {
@@ -22,33 +23,33 @@ class _MariHomePageState extends State<MariHomePage> {
         children: [
           SizedBox(height: 128),
           Text(
-            'Olá! Eu sou Mari',
-            style: Theme.of(context).textTheme.headline1,
+            'Olá! Eu sou a Iara.',
+            style: Theme.of(context).textTheme.headline3,
           ),
-          Text(
-            'Sua guia Turística Virtual',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-          SizedBox(height: 32),
-          Text(
-            'Você pode fazer perguntas ou escrever. Eu irei falar o que sei sobre o assunto relacionado ao Turismo.',
-            style: Theme.of(context).textTheme.headline2,
-          ),
-          Expanded(child: Container()),
+          // SizedBox(height: 8),
+          // Text(
+          //   'Interaja comigo para obter informações a respeito do turismo.',
+          //   style: Theme.of(context).textTheme.headline3,
+          // ),
+          SizedBox(height: 128),
           Center(
-            child: Text(
-              'Estou te ouvindo!',
-              style: Theme.of(context).textTheme.headline3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'sua guia turística',
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+                Text(
+                  'virtual',
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+                SizedBox(height: 32),
+                ComecarButton()
+              ],
             ),
           ),
-          SizedBox(height: 32),
-          Center(
-            child: Icon(
-              Icons.ac_unit,
-              size: 64,
-              color: Colors.white,
-            )
-          )
+          Expanded(child: Container()),
         ],
       )
     );

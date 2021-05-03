@@ -17,10 +17,10 @@ class App extends StatelessWidget {
     
 
     return GetMaterialApp(
-      title: 'Mari',
+      title: 'Iara',
       debugShowCheckedModeBanner: false,
       theme: makeAppTheme(),
-      initialRoute: '/chat',
+      initialRoute: '/',
       getPages: [
         GetPage(name: '/', page: makeMariHomePage),
         GetPage(name: '/chat', page: makeMariChatPage)

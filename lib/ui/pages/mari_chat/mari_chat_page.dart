@@ -21,25 +21,152 @@ class _MariChatPageState extends State<MariChatPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Mari'),
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Icon(Icons.info_outline),
-          )
-        ],
+        backgroundColor: Colors.white, 
+        elevation: 0
       ),
       body: Builder(
         builder: (context) {
-
           widget.presenter.mainErrorStream.listen((error) {
             if(error != null) {
               showErrorMessage(context, error);
             }
           });
-
           return Column(
             children: [
+              Container(
+                padding: EdgeInsets.only(top: 4, bottom: 4, left: 16, right: 16),
+                decoration: BoxDecoration(
+                  color: Colors.purple[100],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  "Hoje",
+                  style: TextStyle(
+                    color: Colors.blue[800]
+                  ),
+                ),
+              ),
+              SizedBox(height: 16),
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        shape: BoxShape.circle
+                      ),
+                      child: Text(
+                        "ia",
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(24),
+                            bottomRight: Radius.circular(24), 
+                            topRight: Radius.circular(24)
+                          ),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 5)
+                            )
+                          ]
+                        ),
+                        padding: EdgeInsets.all(16),
+                        child: Text("Olá meu nome é Iara"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(24),
+                            bottomRight: Radius.circular(24), 
+                            topLeft: Radius.circular(24)
+                          ),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(0, 5)
+                            )
+                          ]
+                        ),
+                        padding: EdgeInsets.all(16),
+                        child: Text("Hospedagens"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        shape: BoxShape.circle
+                      ),
+                      child: Text(
+                        "ia",
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      child: Container(
+                        padding: EdgeInsets.only(left: 16),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(24),
+                              bottomRight: Radius.circular(24), 
+                              topRight: Radius.circular(24)
+                            ),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: Offset(0, 5)
+                              )
+                            ]
+                          ),
+                          padding: EdgeInsets.all(16),
+                          child: Text("As hospedagens mais próximas baseada na sua localização atual são....")
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
               Expanded(
                 child: Container(
                   color: Colors.white
